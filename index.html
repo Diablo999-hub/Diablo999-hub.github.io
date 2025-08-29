@@ -79,6 +79,7 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -92,6 +93,7 @@
       </div>
       <div class="cta">
         <a class="btn primary" href="https://github.com/Diablo999-hub" target="_blank" rel="noopener">View GitHub</a>
+        <a class="btn" href="#contact">Contact</a>
       </div>
     </section>
 
@@ -118,13 +120,13 @@
         </article>
         <article class="card" data-reveal="up">
           <div style="font-weight:700">Pygame – Coin Game</div>
-          <p class="muted">Interactive mini‑game built with Pygame for practice on event loops and state.</p>
+          <p class="muted">Interactive mini-game built with Pygame for practice on event loops and state.</p>
           <div class="tags"><span class="tag">Python</span><span class="tag">Pygame</span></div>
           <a href="https://github.com/Diablo999-hub/Juego-de-Monedas-Pygame-" target="_blank" rel="noopener">Open repository →</a>
         </article>
         <article class="card" data-reveal="up">
-          <div style="font-weight:700">Security Research – XML‑RPC in WordPress</div>
-          <p class="muted">Article with steps and mitigations for XML‑RPC exploitation in CMS.</p>
+          <div style="font-weight:700">Security Research – XML-RPC in WordPress</div>
+          <p class="muted">Article with steps and mitigations for XML-RPC exploitation in CMS.</p>
           <div class="tags"><span class="tag">Security</span><span class="tag">WordPress</span></div>
           <a href="https://www.alpra-tdm.com/blog/explotaci%C3%B3n-a-gestores-de-contenido" target="_blank" rel="noopener">Read article →</a>
         </article>
@@ -136,7 +138,7 @@
       <div class="grid" data-stagger>
         <div class="card">
           <b>Languages & Tools</b>
-          <p class="muted">Python, SQL, Java, C/C++, JavaScript · Pandas, NumPy, Scikit‑learn · Matplotlib, Seaborn · Git/GitHub · Linux/Windows</p>
+          <p class="muted">Python, SQL, Java, C/C++, JavaScript · Pandas, NumPy, Scikit-learn · Matplotlib, Seaborn · Git/GitHub · Linux/Windows</p>
         </div>
         <div class="card">
           <b>Security</b>
@@ -168,8 +170,16 @@
       </div>
     </section>
 
+    <section id="contact">
+      <h2 data-reveal="fade">Contact</h2>
+      <div class="card">
+        <p class="muted">Open to Trainee/Junior roles in Cybersecurity, Data, and Oracle ecosystem.</p>
+        <p><b>Email:</b> <a href="mailto:s4t4nhack@proton.me">s4t4nhack@proton.me</a></p>
+      </div>
+    </section>
+
     <footer>
-      © <span id="y"></span> Mario Martínez · Built with HTML/CSS · Hosted on GitHub Pages · Contact: <a href="mailto:s4t4nhack@proton.me">s4t4nhack@proton.me</a>
+      © <span id="y"></span> Mario Martínez · Built with HTML/CSS · Hosted on GitHub Pages
     </footer>
   </div>
   <script>
@@ -182,7 +192,7 @@
     entries.forEach(e=>{
       if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }
     })
-  }, { threshold: 0.12 });
+  }, { threshold: 0.35 }); // higher threshold so animation triggers later
   els.forEach(el=>io.observe(el));
   // Stagger inside marked containers
   document.querySelectorAll('[data-stagger]').forEach(c=>{
