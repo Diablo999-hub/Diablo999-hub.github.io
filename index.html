@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mario Martínez · Portfolio</title>
+  <meta name="description" content="Cybersecurity & Data enthusiast. Python, SQL, ETL, Visualization. Projects, certifications and contact." />
+  <meta property="og:title" content="Mario Martínez · Portfolio" />
+  <meta property="og:description" content="Cybersecurity & Data enthusiast. Python, SQL, ETL, Visualization. Projects, certifications and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/0?v=4" />
+  <meta name="color-scheme" content="dark light">
+  <style>
+    :root{
+      --bg:#0b0f14;--card:#0f141b;--ink:#e7edf5;--muted:#a7b1bf;--pri:#4aa3ff;--acc:#22c55e;--ring:#2a3340;
+      --pad:clamp(16px,2.5vw,28px);--radius:18px;--shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b0f14,#0a0e13);color:var(--ink);line-height:1.6}
+    a{color:var(--pri);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1080px;margin-inline:auto;padding:var(--pad)}
+    header{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--pri),#9b5cff);display:grid;place-items:center;color:white;font-weight:800}
+    nav a{margin-left:16px;color:var(--muted)}
+    nav a:hover{color:var(--ink)}
+    .hero{margin-top:30px;padding:32px;border:1px solid var(--ring);border-radius:var(--radius);background:radial-gradient(1200px 600px at 90% -10%, rgba(74,163,255,.12), transparent 45%),var(--card);box-shadow:var(--shadow)}
+    .hero h1{font-size:clamp(28px,4.2vw,46px);line-height:1.15;margin:0 0 10px}
+    .hero p{margin:6px 0;color:var(--muted);font-size:clamp(14px,1.7vw,16px)}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid var(--ring);background:#0e141b;color:var(--ink);font-weight:600}
+    .btn.primary{background:var(--pri);border-color:transparent;color:#06121e}
+    .btn svg{width:18px;height:18px}
+    section{margin-top:36px}
+    h2{font-size:clamp(20px,2.6vw,26px);margin:0 0 12px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(1,1fr)}
+    @media(min-width:740px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--card);border:1px solid var(--ring);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{font-size:12px;color:#0b1320;background:linear-gradient(135deg,#bfe1ff,#a0c8ff);padding:4px 10px;border-radius:999px}
+    .muted{color:var(--muted)}
+    .list{display:grid;gap:10px}
+    footer{margin:40px 0 10px;color:var(--muted);text-align:center}
+    .kpis{display:flex;gap:14px;flex-wrap:wrap}
+    .kpi{background:var(--card);border:1px solid var(--ring);border-radius:14px;padding:10px 14px}
+    .kpi b{font-size:18px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mario Martínez",
+    "jobTitle": "Cybersecurity & Data Analyst (Jr)",
+    "url": "https://github.com/Diablo999-hub",
+    "sameAs": [
+      "https://github.com/Diablo999-hub",
+      "https://www.alpra-tdm.com/blog/explotaci%C3%B3n-a-gestores-de-contenido"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">MM</div>
+        <div>
+          <div class="mono" style="letter-spacing:.4px;color:var(--muted)">Mario Martínez</div>
+          <div style="font-weight:700">Cybersecurity & Data (Jr)</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Turning data & security insights into real impact.</h1>
+      <p>Python · SQL · ETL · Visualization (Matplotlib/Seaborn) · Fundamentals of Offensive Security · Oracle/Cloud basics.</p>
+      <div class="kpis">
+        <div class="kpi"><b>26+</b> HTB labs (Shells & Payloads)</div>
+        <div class="kpi"><b>30</b> HTB labs (Info Gathering – Web)</div>
+        <div class="kpi"><b>20</b> HTB labs (Attacking Common Services)</div>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/Diablo999-hub" target="_blank" rel="noopener">
+          <!-- GitHub icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.76.08-.75.08-.75 1.22.09 1.86 1.28 1.86 1.28 1.08 1.86 2.83 1.32 3.52 1 .11-.8.42-1.33.76-1.64-2.67-.31-5.47-1.34-5.47-5.97 0-1.32.47-2.4 1.24-3.25-.12-.31-.54-1.57.12-3.27 0 0 1.01-.32 3.3 1.24a11.5 11.5 0 0 1 6 0c2.28-1.56 3.29-1.24 3.29-1.24.66 1.7.24 2.96.12 3.27.77.85 1.23 1.93 1.23 3.25 0 4.64-2.8 5.65-5.47 5.96.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.82.58A12 12 0 0 0 12 .5Z"/></svg>
+          View GitHub
+        </a>
+        <a class="btn" href="#contact">
+          <!-- Mail icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.5-8 5-8-5V6l8 5 8-5v2.5Z"/></svg>
+          Contact
+        </a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <div style="font-weight:700">TelecomX – Customer Churn Analysis</div>
+          <p class="muted">Exploratory analysis and modeling to understand churn behavior. ETL with Pandas and visual insights.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">EDA</span></div>
+          <a href="https://github.com/Diablo999-hub/TelecomX_alura" target="_blank" rel="noopener">Open repository →</a>
+        </article>
+        <article class="card">
+          <div style="font-weight:700">Alura Store – ETL & Visualization</div>
+          <p class="muted">Data ingestion, cleaning and charts to track products and sales performance.</p>
+          <div class="tags"><span class="tag">ETL</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span></div>
+          <a href="https://github.com/Diablo999-hub/Challenge-Alura-Store" target="_blank" rel="noopener">Open repository →</a>
+        </article>
+        <article class="card">
+          <div style="font-weight:700">10 Python Projects – Utilities</div>
+          <p class="muted">Small, practical scripts focused on algorithms, automation and data tasks.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">CLI</span></div>
+          <a href="https://github.com/Diablo999-hub/10-Proyects-Python" target="_blank" rel="noopener">Open repository →</a>
+        </article>
+        <article class="card">
+          <div style="font-weight:700">Pygame – Coin Game</div>
+          <p class="muted">Interactive mini‑game built with Pygame for practice on event loops and state.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Pygame</span></div>
+          <a href="https://github.com/Diablo999-hub/Juego-de-Monedas-Pygame-" target="_blank" rel="noopener">Open repository →</a>
+        </article>
+        <article class="card">
+          <div style="font-weight:700">Security Research – XML‑RPC in WordPress</div>
+          <p class="muted">Article with steps and mitigations for XML‑RPC exploitation in CMS.</p>
+          <div class="tags"><span class="tag">Security</span><span class="tag">WordPress</span></div>
+          <a href="https://www.alpra-tdm.com/blog/explotaci%C3%B3n-a-gestores-de-contenido" target="_blank" rel="noopener">Read article →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card">
+          <b>Languages & Tools</b>
+          <p class="muted">Python, SQL, Java, C/C++, JavaScript · Pandas, NumPy, Scikit‑learn · Matplotlib, Seaborn · Git/GitHub · Linux/Windows</p>
+        </div>
+        <div class="card">
+          <b>Security</b>
+          <p class="muted">HTB Academy modules: Footprinting; Information Gathering – Web; Vulnerability Assessment; Attacking Common Services; Shells & Payloads; Pivoting/Tunneling/Port Forwarding.</p>
+        </div>
+        <div class="card">
+          <b>Cloud & Oracle (Foundations)</b>
+          <p class="muted">Azure basics · Interest in Oracle OIC, APEX, SQL/PLSQL, BI Publisher, REST/SOAP integrations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="certs">
+      <h2>Certifications</h2>
+      <div class="list">
+        <div class="card">
+          <b>Alura Formations (2025)</b>
+          <p class="muted">Programming · Data Modeling with Python · ETL · Statistics & ML · Agility · Personal Development.</p>
+        </div>
+        <div class="card">
+          <b>Oracle Next Education – Certificate of Completion</b>
+        </div>
+        <div class="card">
+          <b>Intro to Linux – hac4u.io</b>
+        </div>
+        <div class="card">
+          <b>Mexican Informatics Olympiad (2019) – Participant (scholarship)</b>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
