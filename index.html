@@ -8,7 +8,14 @@
   <meta property="og:title" content="Mario Martínez · Portfolio" />
   <meta property="og:description" content="Cybersecurity & Data enthusiast. Python, SQL, ETL, Visualization. Projects, certifications." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://diablo999-hub.github.io/" />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/108465048?s=400&u=3ae81ea0cf2cc8f037841b60767f658b4936d0be&v=4" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Mario Martínez · Portfolio" />
+  <meta name="twitter:description" content="Cybersecurity & Data enthusiast. Python, SQL, ETL, Visualization. Projects, certifications." />
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/108465048?s=400&u=3ae81ea0cf2cc8f037841b60767f658b4936d0be&v=4" />
+  <link rel="canonical" href="https://diablo999-hub.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b0f14'/%3E%3Cpath d='M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z' fill='%234aa3ff'/%3E%3C/svg%3E" />
   <meta name="color-scheme" content="dark light">
   <style>
     :root{
@@ -41,6 +48,8 @@
     .card{background:var(--card);border:1px solid var(--ring);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(20px);animation:fadeUp 1s forwards}
     .tags{display:flex;flex-wrap:wrap;gap:8px}
     .tag{font-size:12px;color:#0b1320;background:linear-gradient(135deg,#bfe1ff,#a0c8ff);padding:4px 10px;border-radius:999px}
+    .card.featured{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc) inset,var(--shadow)}
+    .badge{font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#06120a;background:var(--acc);padding:3px 10px;border-radius:999px;align-self:flex-start}
     .muted{color:var(--muted)}
     .list{display:grid;gap:10px}
     footer{margin:40px 0 10px;color:var(--muted);text-align:center;opacity:0;animation:fadeIn 2s forwards}
@@ -61,7 +70,7 @@
     [data-reveal="down"]{transform:translateY(-24px)}
     @media (prefers-reduced-motion: reduce){
       *{animation:none!important;transition:none!important}
-      [data-reveal]{opacity:1!important;transform:none!important;filter:none!important}
+      [data-reveal],.brand,nav a,.btn,.kpi,section,.card{opacity:1!important;transform:none!important;filter:none!important}
     }
   </style>
 </head>
@@ -75,7 +84,7 @@
           <div style="font-weight:700">Cybersecurity & Data Scientist (Jr)</div>
         </div>
       </div>
-      <nav>
+      <nav aria-label="Primary">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#certs">Certifications</a>
@@ -85,7 +94,7 @@
 
     <section class="hero" data-reveal="up">
       <h1>Turning data & security insights into real impact.</h1>
-      <p>Python · SQL · ETL · Visualization (Matplotlib/Seaborn) · Fundamentals of Offensive Security · Oracle/Cloud basics.</p>
+      <p>Python · SQL · ETL · Visualization (Matplotlib/Seaborn) · Offensive Security fundamentals · AWS cloud infrastructure & zero-trust architecture.</p>
       <div class="kpis" data-stagger>
         <div class="kpi" data-reveal="up"><b>26+</b> HTB labs (Shells & Payloads)</div>
         <div class="kpi" data-reveal="up"><b>30</b> HTB labs (Info Gathering – Web)</div>
@@ -100,6 +109,13 @@
     <section id="projects">
       <h2 data-reveal="fade">Projects</h2>
       <div class="grid cols-3" data-stagger>
+        <article class="card featured" data-reveal="up">
+          <span class="badge">Featured · Production</span>
+          <div style="font-weight:700">BDS SecureVault – Self-Hosted Password Manager on AWS</div>
+          <p class="muted">Zero-trust Vaultwarden deployment for 50–100 users: Cloudflare Tunnel (no public inbound ports), RDS PostgreSQL with verify-full TLS, encrypted S3 backups, and Secrets Manager for credential storage. Designed and shipped solo, end-to-end, in ~4.5 hours.</p>
+          <div class="tags"><span class="tag">AWS</span><span class="tag">Zero-Trust</span><span class="tag">Docker</span><span class="tag">IAM</span></div>
+          <a href="https://github.com/Diablo999-hub/bds-securevault" target="_blank" rel="noopener">Open repository →</a>
+        </article>
         <article class="card" data-reveal="up">
           <div style="font-weight:700">TelecomX – Customer Churn Analysis</div>
           <p class="muted">Exploratory analysis and modeling to understand churn behavior. ETL with Pandas and visual insights.</p>
@@ -145,8 +161,8 @@
           <p class="muted">HTB Academy modules: Footprinting; Information Gathering – Web; Vulnerability Assessment; Attacking Common Services; Shells & Payloads; Pivoting/Tunneling/Port Forwarding.</p>
         </div>
         <div class="card">
-          <b>Cloud & Oracle (Foundations)</b>
-          <p class="muted">Azure basics · Interest in Oracle OIC, APEX, SQL/PLSQL, BI Publisher, REST/SOAP integrations.</p>
+          <b>Cloud & Infrastructure</b>
+          <p class="muted">AWS (EC2, RDS, S3, Secrets Manager, IAM least-privilege) · Docker · Cloudflare Zero Trust · Azure basics · Interest in Oracle OIC, APEX, SQL/PLSQL, BI Publisher, REST/SOAP integrations.</p>
         </div>
       </div>
     </section>
@@ -190,6 +206,8 @@
   </div>
   <script>
 (()=>{
+  const y = document.getElementById('y');
+  if (y) y.textContent = new Date().getFullYear();
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const els = document.querySelectorAll('[data-reveal]');
   els.forEach(el=>el.classList.add('reveal'));
